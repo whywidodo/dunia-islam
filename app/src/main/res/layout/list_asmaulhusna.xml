@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="10dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="20dp"
+        android:background="@drawable/ic_card_gradient">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_back"
+                android:layout_marginStart="10dp"
+                android:padding="15dp"/>
+            <TextView
+                android:id="@+id/judulAsmaul"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="@string/asmaul_husna"
+                android:textSize="18sp"
+                android:textColor="#fff"
+                android:gravity="center_horizontal"
+                android:layout_marginEnd="50dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/cariAsmaul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="true"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:background="@drawable/ic_background_search"
+        android:hint="Cari asma Allah..."
+        android:focusableInTouchMode="true"
+        android:fontFamily="@font/poppins"
+        android:paddingVertical="8dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="10dp"
+        android:layout_marginBottom="15dp"
+        android:textColor="@color/grey3"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="15dp"
+        android:textSize="15sp"
+        android:drawableEnd="@drawable/ic_search"
+        android:drawableTint="@color/teal_utama"
+        android:imeOptions="actionSearch"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recylerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/whitegrey"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ProgressBar
+            android:id="@+id/loadBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

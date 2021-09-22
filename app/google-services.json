@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "106347040059",
+    "project_id": "nlabs-islam",
+    "storage_bucket": "nlabs-islam.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:106347040059:android:d7e2211dfef78191f73b1e",
+        "android_client_info": {
+          "package_name": "labs.nusantara.duniaislam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "106347040059-jct9s5lp8hqe2o01q9ot7ac5abihcrb9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "labs.nusantara.duniaislam",
+            "certificate_hash": "5ce0d573d879185e2b20248756a32a789cf3c387"
+          }
+        },
+        {
+          "client_id": "106347040059-iu41eibt4nl3mnat0gt32nj3bmiu52c9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMOE42MJiBo3MvSuoT10EFP08cTj_ZzUk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "106347040059-iu41eibt4nl3mnat0gt32nj3bmiu52c9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

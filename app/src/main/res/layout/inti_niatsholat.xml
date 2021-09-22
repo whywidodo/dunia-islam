@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/teal_utama">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="10dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="20dp"
+        android:background="@drawable/ic_card_gradient">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_back"
+                android:layout_marginStart="10dp"
+                android:padding="15dp"/>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/shalat_img"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"/>
+        <TextView
+            android:id="@+id/judulNiat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/app_name"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#fff"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/ic_round_background">
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/namaIntiTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/app_name"
+                    android:textSize="14sp"
+                    android:layout_marginEnd="10dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/arabIntiTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/arabic"
+                    android:text="@string/app_name"
+                    android:textSize="20sp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="15dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/latinIntiTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="@string/app_name"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="10dp" />
+
+
+        <TextView
+            android:id="@+id/terjemahanIntiTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/app_name"
+            android:textSize="12sp"
+            android:textStyle="italic" />
+    </LinearLayout>
+
+</LinearLayout>
