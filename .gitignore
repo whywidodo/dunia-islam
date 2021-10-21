@@ -10,6 +10,11 @@
 .DS_Store
 /build
 /captures
+keystore.jks
+private_key.pepk
+nlabs-islam-new.json
+nlabs-islam-old.json
+output-metadata.json
 .externalNativeBuild
 .cxx
 local.properties

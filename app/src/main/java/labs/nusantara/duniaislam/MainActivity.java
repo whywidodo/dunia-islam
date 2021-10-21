@@ -2,9 +2,12 @@ package labs.nusantara.duniaislam;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -31,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     private Toast toast;
     private long lastBackPressTime = 0;
 
-    private StyleableToast customToast;
+    private StyleableToast customToast, customToastInternet;
 
     TextView textQuotes;
     // Firebase
@@ -42,6 +45,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        if(cekInternet(MainActivity.this)) {
+            // Isi kode perintah...
+        } else {
+            customToastInternet = StyleableToast.makeText(MainActivity.this, "Tidak Terhubung ke Internet!", Toast.LENGTH_SHORT, R.style.mytoastNot);
+            customToastInternet.show();
+        }
 
         // Pop Up
         myDialog = new Dialog(this);
@@ -61,6 +71,22 @@ public class MainActivity extends AppCompatActivity {
         textQuotes = findViewById(R.id.textQuotes);
         // Get Data Method
         GetDataFromFirebase();
+    }
+
+    private boolean cekInternet(Context context) {
+        Boolean Connected = false;
+        ConnectivityManager connectivity = (ConnectivityManager) context.getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (connectivity != null) {
+            NetworkInfo[] info = connectivity.getAllNetworkInfo();
+            if (info != null) for (int i = 0; i < info.length; i++){
+                if (info[i].getState() == NetworkInfo.State.CONNECTED) {
+                    Connected = true;
+                } else {}
+            }
+        } else {
+            Connected = false;
+        }
+        return Connected;
     }
 
     public void ShowPopup (View v){

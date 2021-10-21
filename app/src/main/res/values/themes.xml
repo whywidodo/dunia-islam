@@ -41,8 +41,18 @@
     <style name="mytoast">
         <item name="stTextBold">true</item>
         <item name="stTextColor">#fff</item>
-        <item name="stTextSize">14sp</item>
+        <item name="stTextSize">12sp</item>
         <item name="stColorBackground">@color/teal_600</item>
+        <item name="stSolidBackground">true</item>
+        <item name="stLength">LONG</item>
+        <item name="stRadius">50dp</item>
+    </style>
+
+    <style name="mytoastNot">
+        <item name="stTextBold">true</item>
+        <item name="stTextColor">#fff</item>
+        <item name="stTextSize">12sp</item>
+        <item name="stColorBackground">@color/red_700</item>
         <item name="stSolidBackground">true</item>
         <item name="stLength">LONG</item>
         <item name="stRadius">50dp</item>
